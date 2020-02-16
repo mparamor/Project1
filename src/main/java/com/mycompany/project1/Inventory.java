@@ -14,7 +14,8 @@ public class Inventory {
     ArrayList<String> db = new ArrayList<>();
     int b = db.size();
     
-    public void diaplay(String p){
+    public void display(String p){
+        int z = 0;
         for(int i=0;i<b;i++){
             String s = db.get(i);
             if (s.contains(p)){
@@ -26,9 +27,12 @@ public class Inventory {
                 else
                     System.out.print(det[2]);
                 }
-            else{
-                System.out.println("Part not found.");
-            }
+            else
+                z++;
+                    
+        }
+        if (z == b){
+            System.out.println("Part not found.");
         }
     }
     
