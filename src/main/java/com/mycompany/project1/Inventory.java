@@ -5,6 +5,7 @@
  */
 package com.mycompany.project1;
 import java.util.ArrayList;
+import java.util.Arrays;
 /**
  *
  * @author Sarah
@@ -25,7 +26,18 @@ public class Inventory {
                 else
                     System.out.print(det[2]);
                 }
+            else{
+                System.out.println("Part not found.");
             }
         }
+    }
+    
+    public void sortName(ArrayList a){
+        
+    }
+    
+    public void sortNum(ArrayList a){
+        
+    }
     }
 
