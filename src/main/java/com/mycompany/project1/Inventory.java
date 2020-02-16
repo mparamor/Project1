@@ -5,7 +5,7 @@
  */
 package com.mycompany.project1;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 /**
  *
  * @author Sarah
@@ -40,8 +40,24 @@ public class Inventory {
         
     }
     
-    public void sortNum(ArrayList a){
-        
+    public ArrayList<String> sortNum(ArrayList a){
+        int i;
+        int j;
+        for(i=0;i<b-1;i++){
+            for (j=0;j<b-i-1;j++){
+                String e = db.get(i);
+                String f = db.get(i+1);
+                String[] g = e.split(",");
+                String[] h = f.split(",");
+                int first = Integer.parseInt(g[1]);
+                int sec = Integer.parseInt(h[1]);
+                if (first>sec){
+                    Collections.swap(db,i,i+1);
+                    
+                }
+            }
+        }
+        return db;
     }
     }
 
