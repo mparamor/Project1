@@ -7,18 +7,19 @@ import java.util.Scanner;
  */
 
 public class BikePart {
+
+    private int part;
       
     public void enter() {
         
-        ArrayList<String> partInventory = new ArrayList<String>(); 
         Scanner input = new Scanner(System.in);
         System.out.println("Enter part information: ");
         String part = input.nextLine();
         partInventory.add(part);
     }
     
-    ArrayList<String> db = new ArrayList<>();
-    int b = db.size();
+    ArrayList<String> partInventory = new ArrayList<>();
+    int b = partInventory.size();
     
     public void sell(String p) {
         Scanner input = new Scanner(System.in);
@@ -27,7 +28,7 @@ public class BikePart {
         //part number, display part and cost; on sale?;
         int z = 0;
         for(int i=0;i<b;i++){
-            String s = db.get(i);
+            String s = partInventory.get(i);
             if (s.contains(p)){
                 String[] det = s.split(",");
                 System.out.print(det[0]+", ");
@@ -47,8 +48,15 @@ public class BikePart {
         //prints time of sale;
         LocalDateTime myObj = LocalDateTime.now();
         System.out.println(myObj); 
-        //decrement quantity;  
-        partInventory.remove(      )
+        //decrement quantity;
+        for(int i=0;i<b;i++){
+            String s = partInventory.get(i);
+            String[] det = s.split(",");
+            String n = det[1];
+            if (n.equals(number)){
+                partInventory.remove(part);
+            }
+            
+    }
    }
-   
 }
