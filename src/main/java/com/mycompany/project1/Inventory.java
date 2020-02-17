@@ -6,6 +6,8 @@
 package com.mycompany.project1;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Objects;
+import java.util.Arrays;
 /**
  *
  * @author Sarah
@@ -36,8 +38,22 @@ public class Inventory {
         }
     }
     
-    public void sortName(ArrayList a){
-        
+    public ArrayList<String> sortName(ArrayList a){
+        int i;
+        int j;
+        String temp;
+        for (i = 0; i < b; i++) {
+            for (j = i + 1; j < b; j++) { 
+                String[] str = new String[b];
+                str[i] = db.get(i); 
+                if (str[i].compareTo(str[j]) > 0){
+                    temp = str[i];
+                    str[i] = str[j];
+                    str[j] = temp;
+                }
+            }
+        }
+        return db;
     }
     
     public ArrayList<String> sortNum(ArrayList a){
